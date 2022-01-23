@@ -175,6 +175,14 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 .logo > img:hover {
     transform: scale(var(--hokaze-ls));
 }
+.nav-wrap[data-v-1cc2919e] {
+    background: rgb(var(--color-foreground));
+    width: 100%;
+}
+.nav-wrap {
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+}
 /* hides reviews + submissions */
 .nav .link:nth-child(7), .nav .link:nth-child(8) {
   width: 0;
@@ -253,6 +261,12 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 }
 .banner-content:hover > .actions {
   transform: translateX(183px);
+}
+.name-wrapper[data-v-1cc2919e] {
+    display: none !important;
+}
+.name-wrapper[data-v-1cc2919e] {
+    padding: 22px 25px;
 }
 /* Container */
 }
