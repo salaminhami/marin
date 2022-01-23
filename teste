@@ -37,6 +37,8 @@ body,
     --color-pink-light: 244,138,142 !important;
     --color-blue-dark: 94,139,162 !important;
     --color-blue-light: 165,189,201 !important;
+    --kitagawa-owner-icon: url("https://files.catbox.moe/7bjyvr.png");
+    --kitagawa-friends-icon: url("https://files.catbox.moe/wup3r1.png");
     --kitagawa-home-icon: url("https://files.catbox.moe/2ol7cp.png");
     --kitagawa-profile-icon: url("https://files.catbox.moe/074pb3.png");
     --kitagawa-anime-icon: url("https://files.catbox.moe/jueuat.svg");
@@ -86,7 +88,16 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 {cursor: url("https://files.catbox.moe/qce6iw.png"), pointer;}
     overflow: overlay;
     box-shadow: inset 0 330px 50px rgba(0,0,0,0.7);
-    font-family: 'Overpass';
+    font-family: 'Lemon Milk', 'Overpass';
+}
+.pointer, a[href], button, input[type=image], input[type=submit], label[for], select {
+    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
+}
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
+}
+a, a:link img {
+    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
 }
 /* Avatar Settings */
   --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
@@ -200,13 +211,19 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 }
 .container > .banner-content {
   height: var(--hokaze-bch);
-  width: 0;
+   width: 50;
+  align-items: center;
+  justify-content: center;
+}
+.container > .banner-content {
+  height: var(--hokaze-bch);
+  width: 0px;
   align-items: center;
   justify-content: center;
 }
 .banner-content > .avatar {
-  width: 0;
-  height: 0;
+  width: 0px;
+  height: 0px;
   padding: var(--hokaze-as);
   background: var(--hokaze-av);
   background-size: var(--hokaze-ai);
@@ -224,6 +241,19 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
   z-index: 110;
   opacity: 1;
   pointer-events: none;
+}
+.banner-content > .follower-badge {
+  position: absolute;
+  bottom: var(--hokaze-bctc);
+  margin: 0;
+  padding: 11.5px 10px;
+  transition: var(--hokaze-at);
+}
+.banner-content > .follower-badge:hover {
+  background: rgba(var(--color-blue),1);
+}
+.banner-content:hover > .follower-badge {
+  transform: translateX(-170px);
 }
 .banner-content > .name-wrapper > .name {
   transition: var(--hokaze-vt);
@@ -304,6 +334,10 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
   border-radius: var(--hokaze-brb);
 }
 /* OVERVIEW */
+.overview > div > .about > .content-wrap {
+    border-radius: 5px 15px;
+    background-color: transparent !important;
+}
 .user .overview {
     grid-template-columns: 480px auto!important;
 }
@@ -431,6 +465,32 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 > a {
     box-shadow: 0px 0 10px 20px rgb(0 0 0 / 10%);
 }
+}
+a[href="/user/kiyume/"]:not(.avatar):not(.user):not(.link):not(.primary-link) {
+    color: rgb(var(--color-pink-dark)) !important;
+    letter-spacing: 0.03em;
+}
+a[href="/user/kiyume/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {
+    content: '';
+    mask: var(--kitagawa-owner-icon) no-repeat 50% 50%;
+    -webkit-mask: var(--kitagawa-owner-icon) no-repeat 50% 50%;
+    mask-size: cover;
+}
+.text 
+> .header
+> .name::after, .reply 
+> .header
+> .name::after {
+    content: '';
+    mask: var(--kitagawa-friends-icon) no-repeat 50% 50%;
+    -webkit-mask: var(--kitagawa-friends-icon) no-repeat 50% 50%;
+    mask-size: cover;
+    -webkit-mask-size: auto;
+    position: inherit;
+    padding: 10px 8px;
+    background-color: rgb(var(--color-pink-dark));
+    margin-left: 8px;
+}
 /* activity-feed */
 .overview > div > div > .activity-feed {
 	grid-gap: 30px;
@@ -492,8 +552,7 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 }
 .activity-history {
     border-radius: 5px 15px !important;
-    background-color: rgba(var(--tr)) !important;
-    backdrop-filter: blur 2px !important;
+    background-color: transparent !important;
 }
 .section-header[data-v-b79eb0f0]::after {
     content: " | most planning than reading";
@@ -732,8 +791,7 @@ opacity: 0;
     font-weight: 600;
     overflow: hidden;
     padding: 0!important;
-    background-color: rgba(var(--tr)) !important;
-    backdrop-filter: blur 2px !important;
+    background-color: transparent !important;
 }
 .milestones[data-v-815ccddc] {
     display: none;
@@ -802,25 +860,27 @@ h1, h2 {
 }
 .el-dropdown[data-v-09492909] {
     color: rgb(var(--color-text));
-    font-size: 1.3rem;
+    font-size: 1rem;
     font-weight: bold;
     letter-spacing: 0.15em;
     font-family: 'Overpass';
 }
 .el-dropdown-menu, .popper-arrow {
-    background-color: rgba(var(--tr)) !important;
-    backdrop-filter: blur 2px !important;
+    background-color: transparent !important;
 }
 .el-dropdown-menu, .el-dropdown-menu__item {
-    color: rgb(var(--color-text)) !important;
+    background-color: transparent !important;
+    margin-right: -13px !important;
+    font-size: 1rem;
+    color-text: rgb(var(--color-text)) !important;
 }
 .el-dropdown-menu__item {
     list-style: none;
     line-height: 36px;
     padding: 0 20px;
     margin: 0;
-    font-size: 14px;
-    color: rgb(var(--color-white)) !important;
+    font-size: 1px;
+    color: rgb(var(--color-text)) !important;
     cursor: pointer;
     outline: none;
 }
@@ -845,7 +905,7 @@ h1, h2 {
   visibility: visible;
   content: "kiyume's";
   font-family: 'Lemon Milk', 'Overpass';
-  font-size: 2.3rem;
+  font-size: 2.1rem;
   font-weight: bolder;
   color: rgb(var(--color-pink-dark)) !important;
 }
@@ -966,13 +1026,4 @@ backdrop-filter: blur(2px) !important;
 }
 .theme-selector {
   display: none;
-}
-.pointer, a[href], button, input[type=image], input[type=submit], label[for], select {
-    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
-}
-a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
-    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
-}
-a, a:link img {
-    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
 }
