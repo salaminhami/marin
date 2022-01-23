@@ -566,12 +566,51 @@ color: white;
 opacity: 0;
 }
 .markdown .markdown-spoiler:before {
-    color-text: rgb(var(--color-text)) !important;
+    color-text: rgb(var(--color-white)) !important;
+    letter-spacing: 0.04em;
+    font-weight: normal;
+    font-family: 'Overpass';
+    text-transform: uppercase;
     background: #f48a8e !important;
     border-radius: 5px 15px;
-    content: "S P O I L E R";
-    padding: 0 16px;
+    content: "s p o i l e r";
+    font-size: 1.2rem;
+    padding: 3px 15px 0.5px 15px; 
 }
+.markdown .markdown-spoiler {
+    background: rgb(var(--color-blue-dark)) !important;
+    color-text: rgb(var(--color-text));
+    border-radius: 2px;
+    min-width: 150px;
+    padding: 5px;
+    position: relative;
+}
+.markdown .markdown-spoiler.spoiler-visible i.hide-spoiler {
+    background: 0 0;
+    color: rgb(var(--color-text));
+    cursor: pointer;
+    opacity: 0;
+    position: absolute;
+    right: -6px;
+    top: -3px;
+    transition: .2s;
+}
+.text .name[data-v-77aecf0c] {
+    display: inline-block;
+    height: 40px;
+    line-height: 40px;
+    margin-left: 12px;
+    vertical-align: top;
+}
+.name[data-v-77aecf0c] {
+    color: rgb(var(--color-white));
+    font-family: 'Overpass';
+    letter-spacing: 0.2em;
+    font-weight: bold;
+    font-size: 1.6rem;
+    text-transform: uppercase;
+}
+
 /* LIKE HEART */
 .action.likes .button:hover,
 .like-wrap.thread_comment .button:hover{
@@ -738,11 +777,12 @@ h1, h2 {
 }
 / * ACTIVITY DROPDOWN * /
 }
-.el-dropdown {
-    display: inline-block;
-    position: relative;
-    color: transparent !important;
-    font-size: 14px;
+.el-dropdown[data-v-09492909] {
+    color: rgb(var(--color-text));
+    font-size: 1.3rem;
+    font-weight: bold;
+    letter-spacing: 0.15em;
+    font-family: 'Overpass';
 }
 .el-dropdown-menu, .popper-arrow {
     background-color: rgba(var(--tr)) !important;
@@ -777,7 +817,6 @@ h1, h2 {
     display: inline-block;
     -webkit-font-smoothing: antialiased;
 }
-/ * TEXT ACTIVITY * /
 .section-header[data-v-09492909]::before {
   transition: transform .7s ease-in-out;
   visibility: visible;
@@ -786,6 +825,16 @@ h1, h2 {
   font-size: 2.3rem;
   font-weight: bolder;
   color: rgb(var(--color-pink-dark)) !important;
+}
+h2 {
+    font-family: 'Overpass';
+    font-size: 1.7rem !important;
+    font-weight: bolder !important;
+}
+h1, h2 {
+    color: rgb(var(--color-text));
+    letter-spacing: 0.2em;
+    text-transform: uppercase !important;
 }
 /* favourite enlarge while hover*/
 .favourite[data-v-0317d914] {
