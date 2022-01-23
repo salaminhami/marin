@@ -933,3 +933,13 @@ backdrop-filter: blur(2px) !important;
 }
 .theme-selector {
   display: none;
+}
+.pointer, a[href], button, input[type=image], input[type=submit], label[for], select {
+    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
+}
+a[href], input[type='submit'], input[type='image'], label[for], select, button, .pointer {
+    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
+}
+a, a:link img {
+    cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
+}
