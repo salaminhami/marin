@@ -296,11 +296,16 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
   backdrop-filter: blur(var(--hokaze-bl));
 }
 /* OVERVIEW */
+.user .overview {
+    grid-template-columns: 480px auto!important;
+}
+.overview .content-wrap {
+    border-radius: 6px;
 }
 @media (min-width: 1540px) {
   .content.container {
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 50px;
+    padding-right: 50px;
   }
 }
 @media (min-width: 1040px) and (max-width: 1540px) {
@@ -309,6 +314,114 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
     padding-right: 20px;
   }
 }
+.favourites .favourite {
+    border-radius: 9px !important;
+    border: 5px solid blur(var(--hokaze-bl)) !important;
+}
+.overview .favourites 
+> .favourites-wrap {
+    width: 480px;
+}
+.activity-message .wrap 
+> .actions,
+.activity-text .wrap 
+> .actions {
+    right: 0;
+    bottom: 0;
+    font-size: 1.35rem;
+    margin: -10px 10px 10px 15px;
+}
+.wrap 
+> div.text 
+> div.activity-markdown{
+   border-bottom: 1px solid rgba(var(--color-text), 0.2);
+}
+.activity-message .wrap 
+> .actions, .activity-text .wrap 
+> .actions {
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+}
+@media (min-width: 1540px) {
+.cover,
+.activity-anime_list .wrap,
+.activity-manga_list .wrap {
+    max-height: 70px;
+    overflow: hidden;
+    transition: 0.2s;
+    }
+}
+@media (min-width: 1540px) {
+.activity-anime_list .wrap:hover,
+.activity-manga_list .wrap:hover {
+    max-height: 150px;
+    }
+}
+@media (min-width: 1540px) {
+.activity-anime_list .wrap:hover .cover,
+.activity-manga_list .wrap:hover .cover {
+    max-height: 150px;
+    transition: 0.2s;
+    }
+}
+.activity-feed > div > div.wrap > div.list.small > a::before {
+    content: "";
+    background: inherit;
+    width: 17%;
+    height: 113%;
+    display: block;
+    z-index: -3;
+    position: absolute;
+    top: -5px;
+    left: 14px;
+    -webkit-filter: blur(1.7px);
+}
+.activity-anime_list .wrap, .activity-manga_list .wrap {
+    background: linear-gradient(90deg, rgba(94,139,162,0) -3%, rgba(94,139,162,0.6558998599439776) 10%, rgba(94,139,162,0.9836309523809523) 19%, rgba(94,139,162,1) 100%);
+}
+.activity-entry.full-width.activity-anime_list > div.wrap,
+.activity-entry.full-width.activity-manga_list > div.wrap {
+    background: linear-gradient(90deg, rgba(94,139,162,0) 0%, rgba(94,139,162,0.6559) 10%, rgba(94,139,162,0.999631) 20%, rgba(94,139,162,1) 100%);
+}
+.activity-entry.full-width.activity-manga_list > div.wrap > div.list.small > a> a::before,
+.activity-entry.full-width.activity-anime_list > div.wrap > div.list.small > a> a::before {
+    content: "";
+    background: inherit;
+    width: 20%;
+    height: 110%;
+    display: block;
+    z-index: -3;
+    position: absolute;
+    top: -5px;
+    left: 16px;
+    -webkit-filter: blur(1.7px);
+}
+/*Activity cover background*/
+@media (min-width: 1540px) {
+    .activity-feed > div > div.wrap > div.list.small > a::before {
+     content: "";
+    background: inherit;
+    width: 20%;
+    height: 113%;
+    display: block;
+    z-index: -3;
+    position: absolute;
+    top: -5px;
+    left: 25px;
+    -webkit-filter: blur(1.7px);
+    }
+}
+
+@media (min-width: 1540px) {
+    .activity-anime_list .wrap, .activity-manga_list .wrap {
+        background: linear-gradient(90deg, rgba(94,139,162,0) -2%, rgba(94,139,162,0.6558998599439776) 15%, rgba(94,139,162,0.983631) 25%, rgba(94,139,162,1) 100%);
+    }
+}
+.wrap 
+> div.list.small 
+> a {
+    box-shadow: 0px 0 10px 20px rgb(0 0 0 / 10%);
 }
 /* activity-feed */
 .overview > div > div > .activity-feed {
@@ -318,6 +431,50 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 .overview > div > div > .activity-feed > .activity-entry {
 	grid-column-start: unset;
 	grid-column-end: unset;
+}
+/* Activity Title-overflow fixed */
+@media (min-width: 1540px) {
+.list.small 
+    > div
+    > div.status
+    > a {
+    white-space: nowrap;
+    width: 230px;
+    overflow: hidden;
+    display: block;
+    text-overflow: ellipsis;
+  }
+}
+/*remove Guild feature on 1280px screen*/
+@media (max-width: 1280px) {
+    .about a:nth-child(17)::after,
+    .about a:nth-child(17)::before {
+        width: 0 !important;
+    }
+}
+.activity-anime_list .wrap:hover .list.small 
+> div
+> div.status 
+> a ,
+.activity-manga_list .wrap:hover 
+.list.small 
+> div 
+> div.status 
+> a {
+    white-space: normal;
+}
+.full-width.activity-anime_list 
+> .wrap 
+> .list.small 
+> div 
+> div.status 
+> a,
+.full-width.activity-manga_list 
+> .wrap > .list.small 
+> div 
+> div.status 
+> a {
+    width: 600px;
 }
 / * ACTIVITY * /
 .overview[data-v-5c30286e] .content-wrap {
