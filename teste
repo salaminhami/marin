@@ -151,9 +151,6 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
     background: rgba(35,38,67,.5);
     color: #e5e7ea;
 }
-.hide {
-    background:  rgb(var(--color-blue-dark)) !important;
-}
 */
 .nav .wrap .search:hover {
     box-shadow: 0 1px 4px rgb(var(--color-pink-light)), 0 0 0 3px rgb(var(--color-white));
@@ -349,6 +346,10 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 .history-day[data-v-b79eb0f0] {
     background: rgb(var(--color-foreground-grey-dark));
 }
+.history-day.lv-1 {
+    background: rgba(var(--color-pink-dark)) !important;
+    filter: contrast(140%);
+}
 .history-day.lv-3 {
     background: rgb(var(--color-pink-light)) !important;
 }
@@ -361,6 +362,19 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 }
 .extras-dropdown .el-dropdown-link[data-v-77aecf0c] {
     color: rgb(var(--color-text));
+}
+.svg-inline--fa {
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
+.time .action.active[data-v-77aecf0c] {
+    color: rgba(var(--color-pink-light),.8) !important;
+}
+.activity-manga_list > div > div > div > div > .title, .hohPinned .list .title[href^="/manga/"] {
+    color: rgba(var(--color-pink-light)) !important;
 }
 / * SCROLLBAR * /
 ::-webkit-scrollbar {
