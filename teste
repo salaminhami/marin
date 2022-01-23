@@ -167,7 +167,6 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
     background-color: rgb(var(--color-blue));
 }
 .logo > img {
-    content:  url("https://files.catbox.moe/oxd45y.png");
     width: 50px !important;
     height: 50px !important;
     transition: var(--hokaze-vt);
@@ -254,11 +253,9 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 .banner-content:hover > .actions {
   transform: translateX(183px);
 }
-
 /* Container */
 }
 .header-wrap > .nav-wrap {
-  max-width: var(--hokaze-maw);
   margin: 0 auto;
   border-radius: var(--hokaze-brt);
   box-shadow: var(--hokaze-ns);
@@ -289,11 +286,7 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 }
 .content.container {
   background: rgba(var(--color-foreground-grey-dark),var(--hokaze-bt));
-  max-width: var(--hokaze-maw);
-  padding: var(--hokaze-pdh);
   border-radius: var(--hokaze-brb);
-  box-shadow: var(--hokaze-bs);
-  backdrop-filter: blur(var(--hokaze-bl));
 }
 /* OVERVIEW */
 .user .overview {
@@ -485,7 +478,7 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 .activity-history {
     border-radius: 5px 15px !important;
     background-color: rgba(var(--tr)) !important;
-    backdrop-filter: blur(var(--bl)) !important;
+    backdrop-filter: blur 2px !important;
 }
 .section-header[data-v-b79eb0f0]::after {
     content: " | most planning than reading";
@@ -496,22 +489,22 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 }
 .history-day {
     border-radius: 6px !important;
-    background: rgb(var(--color-foreground-grey-dark));
+    background: rgb(var(--cp-accent-color));
 }
 .history-day[data-v-b79eb0f0] {
-    background: rgb(var(--color-foreground-grey-dark));
+    background: rgb(var(--cp-accent-color-dim));
 }
  .history-day.lv-1 {
-        background: rgba(var(--color-blue-dark), 0.8) !important;
+        background: rgba(var(--cp-accent-color-dim), 0.8) !important;
 }
         .history-day.lv-3 {
-        background: rgba(var(--color-pink-light), 0.5) !important;
+        background: rgba(var(--cp-accent-color), 0.5) !important;
 }
         .history-day.lv-5 {
-        background: rgba(var(--color-blue-light), 0.9) !important;
+        background: rgba(var(--cp-accent-color-dim), 0.9) !important;
 }
         .history-day.lv-9, .history-day.lv-7 {
-        background: rgb(var(--color-pink-dark)) !important;
+        background: rgb(var(--cp-accent-color)) !important;
 }
 .time[data-v-77aecf0c] {
     color: rgb(var(--color-text));
@@ -536,29 +529,6 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 .activity-manga_list > div > div > div > div > .title, .hohPinned .list .title[href^="/manga/"] {
     color: rgba(var(--color-pink-light)) !important;
 }
-/ * SCROLLBAR * /
-::-webkit-scrollbar {
-    width: 3px;
-    background: transparent !important;
-}
- ::-webkit-scrollbar-corner {
-    background: transparent !important;
-}
-::-webkit-scrollbar-thumb {
-    background: rgba(244,138,142);
-    -webkit-border-radius: 1ex;
-}
-.about .content-wrap:-webkit-scrollbar       {
-    background-color: rgba(255, 255, 255, 0); 
-    width:4px
-}
-.about .content-wrap:-webkit-scrollbar-track {
-    background-color: rgba(255, 255, 255, 0);
-}
-.about .content-wrap:-webkit-scrollbar-thumb {
-    background-color: rgba(196, 196, 240, 0.20); 
-    border-radius:10px;
-}
 /*Bio stretched to max-height*/
 .content-wrap {
   max-height: none !important;
@@ -576,10 +546,10 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 }
 / * load-more * /
 .scroller:hover .load-more: {
-background: var(--color-pink-light) !important;
-border: 15px solid {color:Border};
+background: rgb(var(--color-pink-light)) !important;
+border: 15px solid
 border-radius: 5px 15px;
-color-text: #ffffff !important;
+color-text: rgb(var(--color-text)) !important;
 color: white;
 display: inline-block;
 font-size: {select:Uppercase Font Size};
@@ -589,15 +559,14 @@ text-transform: uppercase;
 width: calc(100% - 22px);
 }
  .scroller:hover .load-more:hover {
-background: var(--color-pink-light) !important;
-color: {color:Main Color};
+background: rgb(var(--color-pink-light)) !important;
+color: white;
 }
 .vignette, #vignette {
 opacity: 0;
 }
 .markdown .markdown-spoiler:before {
-    color-text: #ffffff !important;
-    color: rgb(var(254, 1, 92));
+    color-text: rgb(var(--color-text)) !important;
     background: #f48a8e !important;
     border-radius: 5px 15px;
     content: "S P O I L E R";
@@ -690,7 +659,7 @@ color: #5e8ba2;
     font-size: 1.1rem;
 }
 .progress[data-v-815ccddc] {
-    background-color: rgba(var(--tr)) !important;
+    background-color: transparent !important;
     height: 5px;
     padding: 0 16.5%;
 }
@@ -702,7 +671,7 @@ color: #5e8ba2;
     overflow: hidden;
     padding: 0!important;
     background-color: rgba(var(--tr)) !important;
-    backdrop-filter: blur(var(--bl)) !important;
+    backdrop-filter: blur 2px !important;
 }
 .milestones[data-v-815ccddc] {
     display: none;
@@ -719,19 +688,9 @@ color: #5e8ba2;
 border-radius: 0 0 0 4px;
 }
 / * EDITOR POST * /
-   / * TEXT ACTIVITY * /
-.section-header[data-v-09492909]::before {
-  transition: transform .7s ease-in-out;
-  visibility: visible;
-  content: "kiyume's";
-  font-family: 'Lemon Milk', 'Overpass';
-  font-size: 2.3rem;
-  font-weight: bolder;
-  color: rgb(var(--color-pink-dark)) !important;
-}
 .markdown-editor[data-v-c574a71c] {
     background-color: rgba(var(--tr)) !important;
-    backdrop-filter: blur(var(--bl)) !important;
+    backdrop-filter: blur 2px !important;
     border: var(--bd);
     border-radius: 12.5px !important;
     color: var(--ft) !important;
@@ -787,10 +746,10 @@ h1, h2 {
 }
 .el-dropdown-menu, .popper-arrow {
     background-color: rgba(var(--tr)) !important;
-    backdrop-filter: blur(var(--bl)) !important;
+    backdrop-filter: blur 2px !important;
 }
 .el-dropdown-menu, .el-dropdown-menu__item {
-    color: rgb(var(--color-pink-dark)) !important;
+    color: rgb(var(--color-text)) !important;
 }
 .el-dropdown-menu__item {
     list-style: none;
@@ -798,7 +757,7 @@ h1, h2 {
     padding: 0 20px;
     margin: 0;
     font-size: 14px;
-    color: rgb(var(--color---color-text)) !important;
+    color: rgb(var(--color-white)) !important;
     cursor: pointer;
     outline: none;
 }
@@ -817,4 +776,14 @@ h1, h2 {
     vertical-align: baseline;
     display: inline-block;
     -webkit-font-smoothing: antialiased;
+}
+/ * TEXT ACTIVITY * /
+.section-header[data-v-09492909]::before {
+  transition: transform .7s ease-in-out;
+  visibility: visible;
+  content: "kiyume's";
+  font-family: 'Lemon Milk', 'Overpass';
+  font-size: 2.3rem;
+  font-weight: bolder;
+  color: rgb(var(--color-pink-dark)) !important;
 }
