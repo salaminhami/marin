@@ -95,7 +95,7 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
  --color-purple: 211, 128, 146;
  --hokaze-ar: 255px;  /* Avatar Border Radius */
   --hokaze-at: all 1s ease-in-out; /* Avatar Hover Transition */
-  --hokaze-av: url("https://files.catbox.moe/22efq6.gif"); /* Avatar Picture Link */
+  --hokaze-av: url("https://files.catbox.moe/fogugj.png"); /* Avatar Picture Link */
   --hokaze-ah: 1.1; /* Avatar Hover Scale */
 }
 /* Header */
