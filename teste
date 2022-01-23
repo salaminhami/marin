@@ -86,6 +86,7 @@ a, a li, a li i, a span, a span i, a i, a iframe, a div, a div i, a img, a p, a 
 {cursor: url("https://files.catbox.moe/qce6iw.png"), pointer;}
     overflow: overlay;
     box-shadow: inset 0 330px 50px rgba(0,0,0,0.7);
+    font-family: 'Overpass';
 }
 /* Avatar Settings */
   --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
@@ -610,7 +611,12 @@ opacity: 0;
     font-size: 1.6rem;
     text-transform: uppercase;
 }
-
+.actions[data-v-c574a71c] {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    margin-bottom: 60px;
+}
 /* LIKE HEART */
 .action.likes .button:hover,
 .like-wrap.thread_comment .button:hover{
@@ -689,12 +695,15 @@ opacity: 0;
 }
 .stat .value[data-v-815ccddc] {
     color: #d15462 !important;
+    font-family: 'Lemon Milk', 'Overpass';
+    font-weight: bold;
     font-size: 1.4rem;
-    font-weight: 700;
     padding-bottom: 8px;
 }
 .stat .label[data-v-815ccddc] {
-color: #5e8ba2;
+    color: #5e8ba2;
+    font-family: 'Overpass';
+    font-weight: bold;
     font-size: 1.1rem;
 }
 .progress[data-v-815ccddc] {
@@ -913,6 +922,16 @@ body .overview .favourite.studio,
 /*Kyoto Animation font-size*/
 .favourites-wrap.studios > a:nth-child(7) {
     font-size: 1rem;
+}
+.button:not([data-v-0bd85c1d]), .button.comment, .button.comment[data-v-0e3994d6] {
+    color: rgb(var(--color-blue) !important;
+}
+.button[data-v-c574a71c] {
+    background: rgb(var(--color-blue),0);
+    color: rgb(var(--color-white));
+    font-family: 'Lemon Milk';
+    font-size: 1.4rem;
+    letter-spacing: 0.15em;
 }
 
 #app 
