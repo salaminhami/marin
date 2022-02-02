@@ -26,8 +26,6 @@
   --hokaze-lb: 0px;     /* Anilist Logo Border Thickness */
   --hokaze-lr: 0px;     /* Anilist Logo Border Radius */
   --hokaze-ls: 1.2;     /* Anilist Logo Hover Scaling */
-  --color-nav-transparent-background: var(--color-foreground),.0;
-  --color-nav-transparent-text: var(--color-text);
   --color-footer-background: 0, 0, 0;
   --cp-accent-color: 94,139,162 !important;
   --cp-accent-color-dim: 209,84,98 !important;
@@ -104,6 +102,7 @@ a, a:link img {
     cursor: url(https://files.catbox.moe/yvb75a.png) 10 10, move !important;
 }
 /* Header */
+
 #nav {
   background: rgb(var(--color-blue-light)) !important;
   color: rgb(var(--color-text)) !important;
@@ -120,6 +119,15 @@ a, a:link img {
 }
 .links > .link:hover {
   color: rgb(var(--color-pink-light));
+}
+.nav .router-link-active[data-v-1cc2919e] {
+    color: rgb(var(--color-pink-light));
+}
+.nav .link[data-v-1cc2919e] {
+    color: rgb(var(--color-text));
+    display: inline-block;
+    margin: 0 10px;
+    padding: 15px;
 }
 #nav .links > .browse-wrap {
     position: absolute;
@@ -464,6 +472,20 @@ svg:not(:root).svg-inline--fa:hover {
     border-radius: 5px 15px !important;
     background-color: transparent !important;
 }
+.overview[data-v-5c30286e] .section-header {
+    margin-bottom: 10px;
+    padding-left: 12px;
+}
+h2 {
+    font-family: 'Overpass';
+    font-size: 2rem !important;
+    font-weight: 700 !important;
+}
+h1, h2 {
+    color: rgb(var(--color-text));
+    letter-spacing: 0.2em;
+    text-transform: uppercase !important;
+}
 .section-header[data-v-b79eb0f0]::after {
     content: " | most planning than reading";
     font-size: 1.2rem;
@@ -522,6 +544,48 @@ svg:not(:root).svg-inline--fa:hover {
 .activity-anime_list > div > div > div > div > .title, .hohPinned .list .title[href^="/anime/"] {
     color: rgba(var(--color-blue-dark)) !important;
 }
+.about a:nth-child(1) > img,
+.about a:nth-child(2) > img,
+.about a:nth-child(3) > img,
+.about a:nth-child(4) > img,
+.about a:nth-child(5) > img,
+.about a:nth-child(6) > img,
+.about a:nth-child(7) > img {
+    transition: .5s;
+}
+
+.about a:nth-child(1) > img:hover,
+.about a:nth-child(2) > img:hover,
+.about a:nth-child(3) > img:hover,
+.about a:nth-child(4) > img:hover,
+.about a:nth-child(5) > img:hover, 
+.about a:nth-child(6) > img:hover,
+.about a:nth-child(7) > img:hover {
+    transform: scale(1.05);
+    transition: .5s;
+}
+favourites-wrap[data-v-ddf96a3c] {
+    background: rgb(var(0,0,0,0.8));
+    position:absolute;
+    border-top:1px solid transparent;
+    border-bottom:1px solid transparent;
+    opacity:0;
+    padding:5px;
+    width:90px;
+    display:block;
+    height:0px;
+    top:0; bottom:0;
+    left:0; right:0;
+    grid-gap: 25px;
+    grid-template-columns: repeat(auto-fill,85px);
+    justify-content: space-around;
+    margin-bottom: 30px;
+    margin:auto;
+    vertical-align:middle;
+    overflow:hidden;
+    transition:0.5s ease-in-out;
+    padding: 20px;
+}
 /*Bio stretched to max-height*/
 .content-wrap {
   max-height: none !important;
@@ -567,8 +631,10 @@ opacity: 0;
     font-size: 1.2rem;
     padding: 3px 15px 0.5px 15px; 
 }
-.markdown .markdown-spoiler .hide-spoiler, .markdown .markdown-spoiler span {
-    display: none;
+.markdown .markdown-spoiler.spoiler-visible span {
+    background: #5e8ba2;
+    border-radius: 3px;
+    display: inline;
 }
 .text .name[data-v-77aecf0c] {
     display: inline-block;
@@ -604,6 +670,8 @@ opacity: 0;
   font-family: 'Lemon Milk';
   text-transform: uppercase;
   color: #d15462;
+}
+
 }
 /* LIKE HEART */
 .action.likes .button:hover,
