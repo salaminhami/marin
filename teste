@@ -1,8 +1,8 @@
-
-
 /* Settings */
 :root, .site-theme-dark, .site-theme-contrast {
   /* General Settings */
+  --color-blue: var(--cp-accent-color) !important;
+  --color-blue-dim: var(--cp-accent-color-dim) !important;
     --tr: 0, 0, 0, 0.15 !important;
   --hokaze-br: 10px; /* Global Border Radius */
   --hokaze-pv: 30px; /* Vertical Content Padding */
@@ -34,7 +34,7 @@
   --color-pink-light: 244,138,142 !important;
   --color-blue-dark: 94,139,162 !important;
   --color-blue-light: 165,189,201 !important;
-  --color-white: 225, 225, 225 !important;
+  --color-white: 255, 255, 255 !important;
   --color-black: 22, 19 ,19 !important;
   --color-black-grey: 54, 45, 45 !important;
   --color-yellow: 125, 71, 158 !important;
@@ -118,10 +118,10 @@ a, a:link img {
   top: 0px !important;
 }
 .links > .link:hover {
-  color: rgb(var(--color-pink-light));
+  color: rgb(var(--color-pink-light)) !important;
 }
 .nav .router-link-active[data-v-1cc2919e] {
-    color: rgb(var(--color-pink-light));
+    color: rgb(var(--color-blue-dark)) !important;
 }
 .nav .link[data-v-1cc2919e] {
     color: rgb(var(--color-text));
@@ -262,10 +262,12 @@ a, a:link img {
 
 /* Container */
 .header-wrap > .nav-wrap {
-  margin: 0 auto;
-  border-radius: var(--hokaze-brt);
-  box-shadow: var(--hokaze-ns);
-  position: relative;
+    margin: 0 auto;
+    border-radius: var(--hokaze-brt);
+    box-shadow: var(--hokaze-ns);
+    position: relative;
+    max-width: 1520px !important;
+}
 }
 .nav > .link {
   position: relative;
@@ -673,6 +675,14 @@ opacity: 0;
 }
 
 }
+.svg-inline--fa {
+    color: #d15462 !important;
+    display: inline-block;
+    font-size: inherit;
+    height: 1em;
+    overflow: visible;
+    vertical-align: -0.125em;
+}
 /* LIKE HEART */
 .action.likes .button:hover,
 .like-wrap.thread_comment .button:hover{
@@ -1039,27 +1049,23 @@ button, input, optgroup, select, textarea {
     background: rgba(var(--color-foreground),.8) !important;
     backdrop-filter: blur(2px) !important;
 }
-.medialist.cards .entry-card>div {
-
-}
 .medialist.cards .entry-card .edit {
-    background: rgb(var(--color-pink-dark)) !important;
+    background: rgb(var(--color-white)) !important;
 }
 .tooltip {
     backdrop-filter: blur(2px) !important;
 }
-.medialist.cards .entry-card .progress, .medialist.cards .entry-card .score {
-    bottom: 0;
-    color: rgb(var(--color-text));
-    font-family: 'Lemon Milk';
-    font-weight: bold;
-    font-size: 1.1rem;
-    left: 0;
-    padding: 12px;
-    position: absolute;
-    text-align: left;
-    width: 50%;
-    z-index: 2;
+.medialist.cards .entry-card {
+    animation: zoomIn;
+    animation-duration: 1s;
+}
+.medialist.cards .entry-card .progress {
+    width: 60%;
+}
+.medialist .release-status.RELEASING {
+    background: rgb(var(--color-pink-light));
+    box-shadow: 0 0 5px rgb(123 213 85 / 80%);
+    opacity: 1;
 }
 .list-editor-wrap .list-editor .body .input-wrap {
     color: #ffff;
@@ -1183,15 +1189,4 @@ display: none !important;
     font-style: italic;
     margin-left: 10px;
     padding: 10px 14px;
-}
-
-/* Dropdown Integration */
-:root, .site-theme-dark, .site-theme-contrast {
-    --color-background-100: var(--color-foreground);
-    --color-background-200: var(--color-background);
-    --color-gray-100: var(--color-foreground);
-    --color-gray-600: var(--color-text-light);
-    --color-gray-700: var(--color-text-light);
-    --color-gray-800: var(--color-blue);
-    --color-gray-900: var(--color-blue);
 }
