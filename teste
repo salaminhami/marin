@@ -118,7 +118,7 @@ a, a:link img {
 .nav.nav-unscoped.transparent, .nav:hover {
   top: 0px !important;
 }
-#nav .nav-wrap {
+#nav .wrap {
   box-shadow:none!important;
 }
 .links > .link:hover {
