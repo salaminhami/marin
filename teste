@@ -118,20 +118,6 @@ a, a:link img {
 .nav.nav-unscoped.transparent, .nav:hover {
   top: 0px !important;
 }
-.nav .wrap .links {
-    grid-column-start: 3;
-    margin-left: -25px;
-}
-.links[data-v-4fbac4e1] {
-    align-items: center;
-    display: inline-flex;
-    font-family: Overpass,-apple-system,BlinkMacSystemFont,Segoe UI,Oxygen,Ubuntu,Cantarell,Fira Sans,Droid Sans,Helvetica Neue,sans-serif;
-    font-size: 1.4rem;
-    font-weight: 600;
-    justify-content: center;
-    text-transform: uppercase;
-    width: 100%;
-}
 .links > .link:hover {
   color: rgb(var(--color-pink-light)) !important;
 }
@@ -143,7 +129,6 @@ a, a:link img {
     display: inline-block;
     margin: 0 10px;
     padding: 15px;
-    text-transform: uppercase;
 }
 #nav .links > .browse-wrap {
     position: absolute;
@@ -249,7 +234,7 @@ a, a:link img {
   transition: var(--hokaze-at);
 }
 .banner-content > .follower-badge:hover {
-  background: rgba(var(--color-blue-dark),1) !important;
+  background: rgba(var(--color-blue-dark),1);
 }
 .banner-content:hover > .follower-badge {
   transform: translateX(-170px);
@@ -320,7 +305,7 @@ a, a:link img {
   background: rgb(var(--color-pink-dark)) !important;
 }
 .content.container {
-  background: rgba(var(--color-pink-dark),var(--hokaze-bt)) !important;
+  background: rgba(var(--color-pink-dark),var(--hokaze-bt));
   padding: var(--hokaze-pdh);
   border-radius: var(--hokaze-brb);
 }
@@ -368,19 +353,19 @@ a, a:link img {
 .button.cancel[data-v-c574a71c] {
     background: rgb(var(--color-foreground));
     cursor: var(--pointer) !important;
-    color: rgba(var(--color-text)) !important;
+    color: rgb(var(--color-text-lighter));
 }
 .button.save {
     cursor: var(--pointer) !important;
     color: rgba(var(--color-white)) !important;
-    background: rgba(var(--color-pink-light)) !important;
+    background: rgba(var(--color-pink-light));
 }
 svg.svg-inline--fa.fa-link.fa-w-16 {
     cursor: var(--pointer) !important;
-    color: rgba(var(--color-pink-light)) !important;
+    color: rgba(var(--color-pink-light));
 }
 div.page-content > div > div.content.container > div > div:nth-child(2) > div.activity-feed-wrap > div.activity-edit > div.markdown-editor > div:nth-child(6) > svg > path {
-    color: rgba(var(--color-pink-light)) !important;
+    color: rgba(var(--color-pink-light));
 }
 .embed[data-v-13cdaed6] {
     background: rgb(var(--color-blue-dark)) !important;
@@ -401,10 +386,10 @@ a, a:visited {
     color: rgb(var(--color-pink-dark)) !important;
 }
 .media-embed[data-media-type="manga"] .title {
-    color: rgba(var(--color-pink-light)) !important;
+    color: rgba(var(--color-pink-light));
 }
 .title[data-v-13cdaed6] {
-    color: rgb(var(--color-blue-light)) !important;
+    color: rgb(var(--color-blue-light));
     font-size: 1.3rem;
     font-weight: 500;
     margin-bottom: -10px;
@@ -462,7 +447,7 @@ a, a:visited {
 .wrap 
 > div.text 
 > div.activity-markdown{
-   border-bottom: 1px solid rgba(var(--color-text), 0.2) !important;
+   border-bottom: 1px solid rgba(var(--color-text), 0.2);
 }
 .activity-message .wrap 
 > .actions, .activity-text .wrap 
@@ -587,7 +572,7 @@ h1, h2 {
     background: rgb(var(--cp-accent-color));
 }
 .history-day[data-v-b79eb0f0] {
-    background: rgb(var(--cp-accent-color-dim)) !important;
+    background: rgb(var(--cp-accent-color-dim));
 }
  .history-day.lv-1 {
         background: rgba(var(--cp-accent-color-dim), 0.8) !important;
@@ -771,7 +756,7 @@ opacity: 0;
     vertical-align: top;
 }
 .name:hover[data-v-77aecf0c] {
-    color: rgb(var(--color-blue-dark)) !important;
+    color: rgb(var(--color-blue-dark));
 }
 avatar[data-v-732ef224] {
     color: rgba(var(color-pink-light)) !important;
@@ -829,7 +814,7 @@ span.count {
 .action.likes .button .fa-heart,
 .like-wrap.thread_comment .button .fa-heart{
 	color: #0000;
-	stroke: rgb(var(--color-white)) !important;
+	stroke: rgb(var(--color-white));
 	stroke-width: 70;
 	stroke-alignment: inner;
 	font-size: 0.870em;
@@ -839,7 +824,7 @@ span.count {
 .action.likes .button.liked .fa-heart,
 .like-wrap.thread_comment .button.liked .fa-heart{
 	color: rgb(var(--color-pink-light)) !important;
-	stroke: rgba(0, 0, 0, 0) !important;
+	stroke: rgba(0, 0, 0, 0);
 	stroke-width: 0;
 	font-size: 0.875em;
 	padding-bottom: 0;
@@ -933,20 +918,14 @@ border-radius: 0 0 0 4px;
   opacity: 1;
   font-weight: bold;
 }
-/* hides reviews + submissions */
-.nav .link:nth-child(7), .nav .link:nth-child(8) {
-  width: 0;
-  margin: 0;
-  padding: 0;
-  visibility: hidden;
-}
+
 /* Content - Anime List / Manga List */
 .content > .medialist {
   margin-top: 0;
 }
 .filter-group>span:hover {
-  background: rgb(var(--color-foreground)) !important;
-  color: rgb(var(--color-pink-light)) !important;
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-pink-light);
 }
 .medialist.table .entry:hover .title a {
   font-weight: bold;
@@ -999,8 +978,8 @@ body .overview .favourite.studio,
   margin-top: 0;
 }
 .filter-group a:hover {
-  background: rgb(var(--color-foreground)) !important;
-  color: rgb(var(--color-blue)) !important;
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue));
 }
 
 /* Content - Social */
@@ -1008,8 +987,8 @@ body .overview .favourite.studio,
   margin-top: 0;
 }
 .filter-group span:hover {
-  background: rgb(var(--color-foreground)) !important;
-  color: rgb(var(--color-blue-light)) !important;
+  background: rgb(var(--color-foreground));
+  color: rgb(var(--color-blue-light));
 }
 .follow-card {
   opacity: var(--hokaze-vo);
@@ -1024,13 +1003,21 @@ body .overview .favourite.studio,
 .follow-card:hover, .follow-card > .avatar:hover {
   opacity: 1;
   transform: scale(1.1);
-  border-color: rgb(var(--color-pink-light)) !important;
+  border-color: rgb(var(--color-pink-light));
 }
 .follow-card > .name {
-      background: rgba(var(--color-shadow),.4) !important;
+      background: rgba(var(--color-shadow),.4);
+
+}
+/* hides reviews + submissions */
+.nav .link:nth-child(7), .nav .link:nth-child(8) {
+  width: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
 }
 .filter-group .group-header[data-v-170179fc] {
-    color: rgb(var(--color-text)) !important;
+    color: rgb(var(--color-text));
     margin-bottom: 10px;
 }
 .filter-group[data-v-170179fc] {
@@ -1049,10 +1036,10 @@ body .overview .favourite.studio,
     padding-right: 35px;
 }
 .el-input-group__append, .el-input-group__prepend, .el-input__inner, .el-textarea__inner {
-    background: rgb(var(--color-foreground)) !important;
+    background: rgb(var(--color-foreground));
     border: 0;
     box-shadow: 0;
-    color: rgb(var(--color-text)) !important;
+    color: rgb(var(--color-text));
     outline: 0;
     transition: .2s;
 }
@@ -1091,7 +1078,7 @@ button, input, optgroup, select, textarea {
 }
 .filter-group .draggable>span[data-v-170179fc], .filter-group>span[data-v-170179fc] {
     border-radius: 3px;
-    color: rgb(var(--color-text)) !important;
+    color: rgb(var(--color-text));
     cursor: var(--pointer) !important;
     display: block;
     font-size: 1.4rem;
@@ -1102,7 +1089,7 @@ button, input, optgroup, select, textarea {
     text-transform: capitalize;
 }
 button, input, optgroup, select, textarea {
-    color: rgb(var(--color-text)) !important;
+    color: rgb(var(--color-text));
     font-family: 'Overpass';
     font-size: 1.4rem;
     font-weight: bold;
@@ -1143,12 +1130,12 @@ button, input, optgroup, select, textarea {
     color: #ffff;
 }
 .el-slider__button {
-    background-color: rgb(var(--color-pink-dark)) !important;
-    border-color: rgb(var(--color-white)) !important;
+    background-color: rgb(var(--color-pink-dark));
+    border-color: rgb(var(--color-white));
 }
 .random-btn[data-v-170179fc] {
     align-items: center;
-    background: rgb(var(--color-blue-light)) !important;
+    background: rgb(var(--color-blue-light));
     border-radius: 4px;
     color: #fff;
     cursor: var(--pointer) !important;
@@ -1159,6 +1146,68 @@ button, input, optgroup, select, textarea {
     outline: 0;
     text-align: center;
     width: 30px;
+}
+.medialist.cards .entry-card .title {
+    width: 150px ;
+    white-space: nowrap !important;
+    overflow: hidden;
+    white-space: nowrap !important;
+    text-overflow: ellipsis ;
+    transition: 1s;
+}
+.medialist.cards .entry-card .title:hover {
+   white-space: normal !important;
+    transition: 1s;
+}
+.medialist.cards .entry-card .title {
+    background: rgba(var(--color-foreground),.8) !important;
+    backdrop-filter: blur(2px) !important;
+}
+.medialist.cards .entry-card .edit {
+    background: rgb(var(--color-white)) !important;
+}
+.tooltip {
+    backdrop-filter: blur(2px) !important;
+}
+.medialist.cards .entry-card {
+    animation: zoomIn;
+    animation-duration: 1s;
+}
+.medialist.cards .entry-card .progress {
+    width: 60%;
+}
+.medialist.cards .entry-card .progress, .medialist.cards .entry-card .score {
+    bottom: 0;
+    color: rgb(var(--color-blue-dark));
+}
+.medialist .release-status.RELEASING {
+    background: rgb(var(--color-pink-light));
+    box-shadow: 0 0 5px rgb(123 213 85 / 80%);
+    opacity: 1;
+}
+div.lists > div.actions > div > span.active > svg > path {
+    color: rgba(var(--color-pink-dark)) !important;
+}
+.list-editor-wrap .list-editor .body .input-wrap {
+    color: #ffff;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-areas:
+        "status score progress"
+        "start finish repeat"
+        "notes notes notes"
+        "advanced advanced advanced";
+    justify-content: space-around;
+    font-family: 'Lemon Milk';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.list-editor-wrap .el-input__inner, .list-editor-wrap .el-textarea__inner {
+    background: rgb(var(--color-blue-dark));
+    border: 1pxsolid #a5bdc9;
+    width: 100%;
+    box-shadow: none;
 }
 /*Enhanced liked users overview*/
 .actions > div.action.likes.hohHandledLike.hohLoadedLikes:hover .action.likes.hohHandledLike > div > div.users {
@@ -1185,56 +1234,7 @@ button, input, optgroup, select, textarea {
     transform: scale(0.91);
     border: 1px solid rgb(var(--color-blue-light)) !important;
 }
-.medialist.cards .entry-card .title {
-    background: rgba(var(--color-foreground),.8) !important;
-    backdrop-filter: blur(2px) !important;
-}
-.medialist.cards .entry-card .edit {
-    background: rgb(var(--color-blue-dark)) !important;
-}
-.tooltip {
-    backdrop-filter: blur(2px) !important;
-}
-.medialist.cards .entry-card {
-    animation: zoomIn;
-    animation-duration: 1s;
-}
-.medialist.cards .entry-card .progress {
-    width: 60%;
-}
-.medialist.cards .entry-card .progress, .medialist.cards .entry-card .score {
-    bottom: 0;
-    color: rgb(var(--color-blue-dark)) !important;
-}
-.medialist .release-status.RELEASING {
-    background: rgb(var(--color-pink-light)) !important;
-    box-shadow: 0 0 5px rgb(123 213 85 / 80%) !important;
-    opacity: 1;
-}
-div.lists > div.actions > div > span.active > svg > path {
-    color: rgba(var(--color-pink-dark)) !important;
-}
-.list-editor-wrap .list-editor .body .input-wrap {
-    color: #ffff;
-    display: grid;
-    grid-gap: 40px;
-    grid-template-areas:
-        "status score progress"
-        "start finish repeat"
-        "notes notes notes"
-        "advanced advanced advanced";
-    justify-content: space-around;
-    font-family: 'Lemon Milk';
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-}
-.list-editor-wrap .el-input__inner, .list-editor-wrap .el-textarea__inner {
-    background: rgb(var(--color-blue-dark)) !important;
-    border: 1pxsolid #a5bdc9;
-    width: 100%;
-    box-shadow: none;
-}
+
 /*Fixed bio scrollbar*/
 .about .content-wrap::-webkit-scrollbar {
 display: none !important;
@@ -1249,8 +1249,8 @@ display: none !important;
     margin-bottom: 20px !important;
  }
 .markdown blockquote {
-    background: rgb(var(--color-blue-dark)) !important;
-    border-left: solid 7px rgb(var(--color-text)) !important;
+    background: rgb(var(--color-blue-dark));
+    border-left: solid 7px rgb(var(--color-text));
     border-radius: 5px 15px
     display: inline-block;
     font-style: italic;
@@ -1275,7 +1275,7 @@ display: none !important;
     width: auto;
 }
 #nav > div.quick-search.visible > div.input > svg {
-    color: rgb(var(--color-blue-dark)) !important;
+    color: rgb(var(--color-blue-dark));
 }
 .quick-search.visible {
     backdrop-filter: blur(2px) !important;
@@ -1287,10 +1287,10 @@ display: none !important;
   background: #000;
 }
 .theme-selector > h2 {
-  color: rgb(var(--color-blue)) !important;
+  color: rgb(var(--color-blue));
 }
 a, a:visited {
-    color: rgb(var(--color-text)) !important;
+    color: rgb(var(--color-text));
 }
 
 /* Sorry Hoh */
