@@ -326,6 +326,73 @@ a, a:link img {
   border-radius: var(--hokaze-brb);
 }
 
+/* O MEDIALITS TA AQUI */
+
+.medialist.cards .entry-card .title {
+    width: 150px ;
+    white-space: nowrap !important;
+    overflow: hidden;
+    white-space: nowrap !important;
+    text-overflow: ellipsis ;
+    transition: 1s;
+}
+
+.medialist.cards .entry-card .title:hover {
+   white-space: normal !important;
+    transition: 1s;
+}
+.medialist.cards .entry-card .title {
+    background: rgba(var(--color-foreground),.8) !important;
+    backdrop-filter: blur(2px) !important;
+}
+.medialist.cards .entry-card .edit {
+    background: rgb(var(--color-white)) !important;
+}
+.tooltip {
+    backdrop-filter: blur(2px) !important;
+}
+.medialist.cards .entry-card {
+    animation: zoomIn;
+    animation-duration: 1s;
+}
+.medialist.cards .entry-card .progress {
+    width: 60%;
+}
+.medialist.cards .entry-card .progress, .medialist.cards .entry-card .score {
+    bottom: 0;
+    color: rgb(var(--color-blue-dark));
+}
+.medialist .release-status.RELEASING {
+    background: rgb(var(--color-pink-light));
+    box-shadow: 0 0 5px rgb(123 213 85 / 80%);
+    opacity: 1;
+}
+div.lists > div.actions > div > span.active > svg > path {
+    color: rgba(var(--color-pink-dark)) !important;
+}
+.list-editor-wrap .list-editor .body .input-wrap {
+    color: #ffff;
+    display: grid;
+    grid-gap: 40px;
+    grid-template-areas:
+        "status score progress"
+        "start finish repeat"
+        "notes notes notes"
+        "advanced advanced advanced";
+    justify-content: space-around;
+    font-family: 'Lemon Milk';
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+}
+.list-editor-wrap .el-input__inner, .list-editor-wrap .el-textarea__inner {
+    background: rgb(var(--color-blue-dark));
+    border: 1pxsolid #a5bdc9;
+    width: 100%;
+    box-shadow: none;
+}
+
+
 /* OVERVIEW */
 .overview > div > .about > .content-wrap {
     border-radius: 5px 15px;
@@ -1271,68 +1338,7 @@ button, input, optgroup, select, textarea {
     text-align: center;
     width: 30px;
 }
-.medialist.cards .entry-card .title {
-    width: 150px ;
-    white-space: nowrap !important;
-    overflow: hidden;
-    white-space: nowrap !important;
-    text-overflow: ellipsis ;
-    transition: 1s;
-}
-.medialist.cards .entry-card .title:hover {
-   white-space: normal !important;
-    transition: 1s;
-}
-.medialist.cards .entry-card .title {
-    background: rgba(var(--color-foreground),.8) !important;
-    backdrop-filter: blur(2px) !important;
-}
-.medialist.cards .entry-card .edit {
-    background: rgb(var(--color-white)) !important;
-}
-.tooltip {
-    backdrop-filter: blur(2px) !important;
-}
-.medialist.cards .entry-card {
-    animation: zoomIn;
-    animation-duration: 1s;
-}
-.medialist.cards .entry-card .progress {
-    width: 60%;
-}
-.medialist.cards .entry-card .progress, .medialist.cards .entry-card .score {
-    bottom: 0;
-    color: rgb(var(--color-blue-dark));
-}
-.medialist .release-status.RELEASING {
-    background: rgb(var(--color-pink-light));
-    box-shadow: 0 0 5px rgb(123 213 85 / 80%);
-    opacity: 1;
-}
-div.lists > div.actions > div > span.active > svg > path {
-    color: rgba(var(--color-pink-dark)) !important;
-}
-.list-editor-wrap .list-editor .body .input-wrap {
-    color: #ffff;
-    display: grid;
-    grid-gap: 40px;
-    grid-template-areas:
-        "status score progress"
-        "start finish repeat"
-        "notes notes notes"
-        "advanced advanced advanced";
-    justify-content: space-around;
-    font-family: 'Lemon Milk';
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-}
-.list-editor-wrap .el-input__inner, .list-editor-wrap .el-textarea__inner {
-    background: rgb(var(--color-blue-dark));
-    border: 1pxsolid #a5bdc9;
-    width: 100%;
-    box-shadow: none;
-}
+
 /*Enhanced liked users overview*/
 .actions > div.action.likes.hohHandledLike.hohLoadedLikes:hover .action.likes.hohHandledLike > div > div.users {
     cursor: var(--pointer) !important;
@@ -2540,10 +2546,12 @@ body .overview .favourite.studio,
 .overview .favourite.studio::after {
     display: none !important;
 }
+
 /*Kyoto Animation font-size*/
 .favourites-wrap.studios > a:nth-child(7) {
     font-size: 1rem;
 }
+
 
 /* Content - Stats */
 .content > .stats {
@@ -2719,68 +2727,9 @@ button, input, optgroup, select, textarea {
     text-align: center;
     width: 30px;
 }
-.medialist.cards .entry-card .title {
-    width: 150px ;
-    white-space: nowrap !important;
-    overflow: hidden;
-    white-space: nowrap !important;
-    text-overflow: ellipsis ;
-    transition: 1s;
-}
-.medialist.cards .entry-card .title:hover {
-   white-space: normal !important;
-    transition: 1s;
-}
-.medialist.cards .entry-card .title {
-    background: rgba(var(--color-foreground),.8) !important;
-    backdrop-filter: blur(2px) !important;
-}
-.medialist.cards .entry-card .edit {
-    background: rgb(var(--color-white)) !important;
-}
-.tooltip {
-    backdrop-filter: blur(2px) !important;
-}
-.medialist.cards .entry-card {
-    animation: zoomIn;
-    animation-duration: 1s;
-}
-.medialist.cards .entry-card .progress {
-    width: 60%;
-}
-.medialist.cards .entry-card .progress, .medialist.cards .entry-card .score {
-    bottom: 0;
-    color: rgb(var(--color-blue-dark));
-}
-.medialist .release-status.RELEASING {
-    background: rgb(var(--color-pink-light));
-    box-shadow: 0 0 5px rgb(123 213 85 / 80%);
-    opacity: 1;
-}
-div.lists > div.actions > div > span.active > svg > path {
-    color: rgba(var(--color-pink-dark)) !important;
-}
-.list-editor-wrap .list-editor .body .input-wrap {
-    color: #ffff;
-    display: grid;
-    grid-gap: 40px;
-    grid-template-areas:
-        "status score progress"
-        "start finish repeat"
-        "notes notes notes"
-        "advanced advanced advanced";
-    justify-content: space-around;
-    font-family: 'Lemon Milk';
-    font-weight: bold;
-    text-transform: uppercase;
-    font-size: 1.1rem;
-}
-.list-editor-wrap .el-input__inner, .list-editor-wrap .el-textarea__inner {
-    background: rgb(var(--color-blue-dark));
-    border: 1pxsolid #a5bdc9;
-    width: 100%;
-    box-shadow: none;
-}
+
+
+
 /*Enhanced liked users overview*/
 .actions > div.action.likes.hohHandledLike.hohLoadedLikes:hover .action.likes.hohHandledLike > div > div.users {
     cursor: var(--pointer) !important;
