@@ -292,7 +292,13 @@ a, a:link img {
 .banner-content:hover > .actions {
   transform: translateX(183px);
 }
-
+/* hides reviews + submissions */
+.nav .link:nth-child(7), .nav .link:nth-child(8) {
+  width: 0;
+  margin: 0;
+  padding: 0;
+  visibility: hidden;
+}
 /* Container */
 .header-wrap > .nav-wrap {
     background: transparent !important;
@@ -305,6 +311,7 @@ a, a:link img {
     margin: 15px 5px;
     padding: 10px 15px;
     border-radius: 30px;
+    left: 55px;
 }
 .nav > .link {
   position: relative;
@@ -1215,13 +1222,6 @@ body .overview .favourite.studio,
 .follow-card > .name {
       background: rgba(var(--color-shadow),.4);
 
-}
-/* hides reviews + submissions */
-.nav .link:nth-child(7), .nav .link:nth-child(8) {
-  width: 0;
-  margin: 0;
-  padding: 0;
-  visibility: hidden;
 }
 .filter-group .group-header[data-v-170179fc] {
     color: rgb(var(--color-text));
