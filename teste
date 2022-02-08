@@ -987,7 +987,23 @@ a[href="/user/Robiracer/"]:not(.avatar):not(.user):not(.link):not(.primary-link)
     transition: .5s;
     animation: gradient 15s ease infinite;
 }
-
+a[href="/user/Haikii/"]:not(.avatar):not(.user):not(.link):not(.primary-link)::after {
+    content: '𝘬𝘪𝘵𝘵𝘺 ♡';
+}
+.text > .header > .name::after, .reply > .header > .name::after {
+    content: none;
+    position: relative;
+    top: -1px;
+    left: 4px;
+    padding: 1px 6px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    color: #fff;
+    background: linear-gradient(155deg, #ffff, #d15462, #f48a8e, #a5bdc9, #5e8ba2, #ffff);
+    background: linear-gradient(140deg, #ffff, #d15462, #f48a8e, #a5bdc9, #5e8ba2, #ffff);
+    transition: .5s;
+    animation: gradient 15s ease infinite;
+}
 /* LIKE HEART */
 .action.likes .button:hover,
 .like-wrap.thread_comment .button:hover{
