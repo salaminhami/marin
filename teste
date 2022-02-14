@@ -47,6 +47,7 @@
                rgba(0, 0, 0, 0.07) 0px 8px 16px;
   --hokaze-ns: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow For Navbar */
                rgba(0, 0, 0, 0.07) 0px 2px 4px;
+    --m-a-f: 0.5s;
 
   /* Avatar Settings */
   --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
@@ -1354,20 +1355,17 @@ button, input, optgroup, select, textarea {
     text-align: center;
     width: 30px;
 }
-
-/*Enhanced liked users overview*/
+Enhanced liked users overview*/
 .actions > div.action.likes.hohHandledLike.hohLoadedLikes:hover .action.likes.hohHandledLike > div > div.users {
-    cursor: var(--pointer) !important;
     display: flex !important;
     flex-direction: row;
-    cursor: var(--pointer) !important;
     justify-content: flex-end;
     transition: 0.3s;
 }
 .action.likes.hohHandledLike > div > div.users {
     animation: fadeInRight;
     animation-duration: 0.5s;
-    transition: 0.5s;;
+    transition: 0.5s;
     background: none !important;
 }
 .action.likes.hohHandledLike > div > div.users > a {
@@ -1378,8 +1376,8 @@ button, input, optgroup, select, textarea {
     filter: hue-rotate(340deg);
     transition: 0.3s;
     transform: scale(0.91);
-    border: 1px solid rgb(var(--color-blue-light)) !important;
-}
+    border: 1px solid rgb(var(--color-blue-dark)) !important;
+
 
 /*Fixed bio scrollbar*/
 .about .content-wrap::-webkit-scrollbar {
@@ -2391,6 +2389,31 @@ a[href="/user/Robiracer/"]:not(.avatar):not(.user):not(.link):not(.primary-link)
     animation: gradient 15s ease infinite;
 }
 
+/*Enhanced liked users overview*/
+.actions > div.action.likes.hohHandledLike.hohLoadedLikes:hover .action.likes.hohHandledLike > div > div.users {
+    cursor: var(--pointer) !important;
+    display: flex !important;
+    flex-direction: row;
+    cursor: var(--pointer) !important;
+    justify-content: flex-end;
+    transition: 0.3s;
+}
+.action.likes.hohHandledLike > div > div.users {
+    animation: fadeInRight;
+    animation-duration:var(--m-a-f);
+    transition: var(--m-a-f);
+    background: none !important;
+}
+.action.likes.hohHandledLike > div > div.users > a {
+    border-radius: 50%;
+    filter: saturate(0.3);
+}
+.action.likes.hohHandledLike > div > div.users > a:hover {
+    filter: hue-rotate(340deg);
+    transition: 0.3s;
+    transform: scale(0.91);
+    border: 1px solid rgb(var(--color-blue-light)) !important;
+}
 /* LIKE HEART */
 .action.likes .button:hover,
 .like-wrap.thread_comment .button:hover{
@@ -2744,34 +2767,6 @@ button, input, optgroup, select, textarea {
     width: 30px;
 }
 
-
-
-/*Enhanced liked users overview*/
-.actions > div.action.likes.hohHandledLike.hohLoadedLikes:hover .action.likes.hohHandledLike > div > div.users {
-    cursor: var(--pointer) !important;
-    display: flex !important;
-    flex-direction: row;
-    cursor: var(--pointer) !important;
-    justify-content: flex-end;
-    transition: 0.3s;
-}
-.action.likes.hohHandledLike > div > div.users {
-    animation: fadeInRight;
-    animation-duration: 0.5s;
-    transition: 0.5s;;
-    background: none !important;
-}
-.action.likes.hohHandledLike > div > div.users > a {
-    border-radius: 50%;
-    filter: saturate(0.3);
-}
-.action.likes.hohHandledLike > div > div.users > a:hover {
-    filter: hue-rotate(340deg);
-    transition: 0.3s;
-    transform: scale(0.91);
-    border: 1px solid rgb(var(--color-blue-light)) !important;
-}
-
 /*Fixed bio scrollbar*/
 .about .content-wrap::-webkit-scrollbar {
 display: none !important;
@@ -2794,6 +2789,7 @@ display: none !important;
     margin-left: 10px;
     padding: 10px 14px;
 }
+
 /* Footer */
 .wrap > .footer {
   position: relative;
