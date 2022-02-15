@@ -48,6 +48,12 @@
   --hokaze-ns: rgba(0, 0, 0, 0.07) 0px 1px 2px, /* Box Shadow For Navbar */
                rgba(0, 0, 0, 0.07) 0px 2px 4px;
     --m-a-f: 0.5s;
+    --spotfy-url-profile: url('https://spotify-github-profile.vercel.app/api/view?uid=315e5jykk64wsexpiv72l5bzlqia&cover_image=true&theme=natemoo-re&bar_color=a5bdc9&bar_color_cover=false');
+    --spotfy-bacground-color: rgb(var(--color-pink-light));
+    --spotfy-logo-color: rgb(var(--color-blue-light));
+    --spotfy-border: 2px solid rgb(var(--color-pink-dark));
+    --spotfy-font-title: 1.4rem; /*don't change the font size if you have the same as the original*/
+
 
   /* Avatar Settings */
   --hokaze-as: 100px;   /* Avatar Size: One Value = Square, Two Values = Rectangle */
@@ -642,7 +648,7 @@ svg:not(:root).svg-inline--fa:hover {
 }
 h2 {
     font-family: 'Overpass';
-    font-size: 2rem !important;
+    font-size: var(--spotfy-font-title) !important;
     font-weight: 700 !important;
 }
 h1, h2 {
@@ -804,10 +810,84 @@ favourites-wrap[data-v-ddf96a3c] {
 .favourites {
     margin-top: 0 !important;
 }
-/* Hide Genre */
-.desktop:nth-of-type(3) {
-    height: 0;
-    visibility: hidden;
+.content.container > div > div:nth-child(1) > div:nth-child(3) > h2:before {
+    content: "Listening to Spotify" !important;
+    font-size: var(--spotfy-font-title) !important;
+    font-family: 'Overpass';
+    font-weight: 700;
+}
+.content.container > div > div:nth-child(1) > div:nth-child(3) > h2:after {
+
+}
+.content.container > div > div:nth-child(1) > div:nth-child(3) > h2 {
+    font-size: 0;
+}
+.percentage-bar {
+    display: none !important;
+}
+.genres > div:nth-child(2),
+.genres > div:nth-child(3),
+.genres > div:nth-child(4),
+.genres > div:nth-child(5) {
+    display: none !important;
+}
+.genres > div:nth-child(1) > div.name {
+    padding: 0 !important;
+    height: 0 !important;
+    font-size: 0 !important;
+}
+.genres .amount {
+    display: none !important;
+}
+.genres:before {
+    content: url(https://i.imgur.com/POJbOJ2.png);
+    transform: scale(0.64);
+    display: inline-block;
+    position: absolute;
+    margin-left: -106px;
+    margin-top: -33px;
+    z-index: 3;
+}
+.genres > div:nth-child(1):before {
+    content: '';
+    display: inline-block;
+    z-index: 20;
+    border: var(--spotfy-border);
+    transform: scale(1.3);
+    padding-top: 1px;
+    background: var(--spotfy-bacground-color);
+    width: 328px;
+    height: 96px;
+    margin-top: 9px;
+    box-shadow: 0px 0px 7px 0px rgb(0 0 0 / 32%);
+    border-radius: 4px;
+}
+.genres > div:nth-child(1):after {
+    content: var(--spotfy-url-profile);
+    transform: scale(1.3);
+    display: inline-block;
+    position: absolute;
+    background: var(--spotfy-bacground-color);
+    margin-left: -160px;
+    margin-top: -103px;
+    z-index: 3;
+}
+.genres:after {
+    content: '';
+    mask: url('https://i.imgur.com/KIoS2u2.png') no-repeat 50% 50%;
+    -webkit-mask: url('https://i.imgur.com/KIoS2u2.png') no-repeat 50% 50%;
+    mask-size: cover;
+    -webkit-mask-size: auto;
+    position: absolute;
+    padding: 60px 67px;
+    background-color: var(--spotfy-logo-color);
+    margin-left: 330px;
+    margin-top: -33px;
+    overflow: overlay;
+    transform: scale(0.3);
+    z-index: 3;
+}
+
 }
 .scroller > .load-more {
   margin-top: 0;
@@ -2035,7 +2115,7 @@ svg:not(:root).svg-inline--fa:hover {
 }
 h2 {
     font-family: 'Overpass';
-    font-size: 2rem !important;
+    font-size: var(--spotfy-font-title) !important;
     font-weight: 700 !important;
 }
 h1, h2 {
